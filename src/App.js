@@ -1,13 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import WeatherApp from "./WeatherApp";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        Hello!
+        <WeatherApp />
         <footer>
           {" "}
           Open source code by{" "}
