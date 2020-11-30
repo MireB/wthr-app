@@ -9,7 +9,14 @@ function App() {
       <div className="container">Hello!</div>
       <footer>
         {" "}
-        Open source code by <a href="">Mire Bosch.</a>
+        Open source code by{" "}
+        <a
+          href="https://github.com/MireB/wthr-app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Mire Bosch.
+        </a>
       </footer>
     </div>
   );
