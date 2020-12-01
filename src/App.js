@@ -1,3 +1,7 @@
+// 1) Clean the Create App Template - Install and import bootstrap-->container.
+// 2) Add the Github link in the footer.
+// 3) Create the WeatherApp component and import it.
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -9,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <WeatherApp />
+        <WeatherApp city="Stockholm" />
         <footer>
           {" "}
           Open source code by{" "}
