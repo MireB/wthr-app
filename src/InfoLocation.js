@@ -21,7 +21,7 @@ export default function InfoLocation(props) {
         <div className="col-6">
           <div className="clearfix">
             <div className="icon">
-              <MainIcon />
+              <MainIcon code={props.data.icon} />
             </div>
           </div>
         </div>
