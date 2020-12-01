@@ -1,6 +1,6 @@
 // 15) Create MainIcon and its css.
 // 17) Install and import icons.
-// 18) Mapping the different icons.
+// 18) Mapping the different icons. (icon Url/ API)
 
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";

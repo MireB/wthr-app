@@ -2,8 +2,10 @@
 // 13) Add the props.
 // 14) Import DateLocation component.
 // 16) Import MainIcon component.
+// 21) Import MainTemp component.
 
 import React from "react";
+import MainTemp from "./MainTemp";
 import MainIcon from "./MainIcon";
 import DateLocation from "./DateLocation";
 
@@ -26,7 +28,9 @@ export default function InfoLocation(props) {
           </div>
         </div>
         <div className="col-6">
-          <div className="temp">7</div>
+          <div className="temp">
+            <MainTemp celsius={props.data.temperature} />
+          </div>
         </div>
         <div className="elements">
           <div className="row">
