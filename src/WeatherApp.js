@@ -6,7 +6,8 @@
 // 9) Create a function to submit the search. Add on- in the form.
 // 10)Create a function to change the city. Add on- in the searching tool.
 // 11)Need to create a const for the data of the location and its function, props in Weather.
-// new Date(response.data.dt * 1000) ? --> console log to find it.
+// new Date(response.data.dt * 1000) ? --> console log to find it. I created a varible.
+// 28) Conditional rendering
 
 import React, { useState } from "react";
 import axios from "axios";
@@ -19,13 +20,14 @@ import "./WeatherApp.css";
 export default function WeatherApp(props) {
   const [locationData, setlocationData] = useState({ true: false });
   const [city, setCity] = useState(props.city);
+  let date = "newDate(response.data.dt * 1000)";
 
   function Response(response) {
     setlocationData({
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: newDate(response.data.dt * 1000),
+      date: { date },
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
@@ -48,26 +50,35 @@ export default function WeatherApp(props) {
     axios.get(apiUrl).then(Response);
   }
 
-  return (
-    <div className="WeatherApp">
-      <form onSubmit={SubmitCity}>
-        <div className="row">
-          <div className="col-9">
-            <input
-              type="search"
-              placeholder="Enter a city..."
-              className="form-control"
-              autoFocus="on"
-              onChange={ChangeCity}
-            />
+  if (locationData.ready) {
+    return (
+      <div className="WeatherApp">
+        <form onSubmit={SubmitCity}>
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                className="form-control"
+                autoFocus="on"
+                onChange={ChangeCity}
+              />
+            </div>
+            <div className="col-3">
+              <input type="submit" value="Search" className="btn btn-primary" />
+            </div>
           </div>
-          <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary" />
-          </div>
-        </div>
-      </form>
-      <InfoLocation />
-      <Forecast />
-    </div>
-  );
+        </form>
+        <InfoLocation data={locationData} />
+        <Forecast />
+      </div>
+    );
+  } else {
+    searchCity();
+    return (
+      <div className="Loading">
+        <span>Loading...</span>
+      </div>
+    );
+  }
 }

@@ -16,7 +16,7 @@ export default function InfoLocation(props) {
     <div className="InfoLocation">
       <h1>{props.data.city}</h1>
       <h5>
-        <DateLocation />
+        <DateLocation date={props.data.date} />
       </h5>
       <h6 className="text-capitalize">Description</h6>
       <div className="row">
