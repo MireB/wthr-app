@@ -20,14 +20,13 @@ import "./WeatherApp.css";
 export default function WeatherApp(props) {
   const [locationData, setlocationData] = useState({ true: false });
   const [city, setCity] = useState(props.city);
-  let date = "newDate(response.data.dt * 1000)";
 
   function Response(response) {
     setlocationData({
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: { date },
+      date: "new Date (response.data.dt * 1000)",
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
