@@ -29,13 +29,11 @@ export default function MainIcon(props) {
     "50n": "FOG",
   };
   return (
-    <div className="MainIcon">
-      <ReactAnimatedWeather
-        icon={Mapping[props.code]}
-        color="white"
-        size={50}
-        animate={true}
-      />
-    </div>
+    <ReactAnimatedWeather
+      icon={Mapping[props.code]}
+      color="white"
+      size={50}
+      animate={true}
+    />
   );
 }

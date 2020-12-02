@@ -35,13 +35,13 @@ export default function WeatherApp(props) {
     });
   }
 
-  function ChangeCity(event) {
-    setCity(event.target.value);
-  }
-
   function SubmitCity(event) {
     event.preventDefault();
     searchCity();
+  }
+
+  function ChangeCity(event) {
+    setCity(event.target.value);
   }
 
   function searchCity() {

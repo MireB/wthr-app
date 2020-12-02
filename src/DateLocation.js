@@ -20,7 +20,7 @@ export default function DateLocation(props) {
 
   return (
     <div className="DateLocation">
-      {day}, {hours}:{minutes}
+      {day} {hours}:{minutes}
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function InfoLocation(props) {
       <h5>
         <DateLocation date={props.data.date} />
       </h5>
-      <h6 className="text-capitalize">Description</h6>
+      <h6 className="text-capitalize">{props.data.description}</h6>
       <div className="row">
         <div className="col-6">
           <div className="clearfix">
@@ -37,8 +37,9 @@ export default function InfoLocation(props) {
             <div className="col-12">
               <p>
                 {" "}
-                <strong>Max:</strong> <strong>Min:</strong>{" "}
-                <strong>Humidity:</strong> <strong>Wind:</strong>{" "}
+                <strong>Humidity:</strong>
+                {props.data.humidity}% <strong>Wind:</strong>
+                {props.data.wind}km/h{" "}
               </p>
             </div>
           </div>
