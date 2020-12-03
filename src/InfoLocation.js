@@ -27,21 +27,22 @@ export default function InfoLocation(props) {
             </div>
           </div>
         </div>
-        <div className="mainTemp col-6">
+        <div className="col-6">
           <div className="temp">
             <MainTemp celsius={props.data.temperature} />
           </div>
         </div>
-        <div className="elements">
-          <div className="row">
-            <div className="col-12">
-              <p>
-                {" "}
-                <strong>Humidity:</strong>
-                {props.data.humidity}% <strong>Wind:</strong>
-                {Math.round(props.data.wind)} km/h{" "}
-              </p>
-            </div>
+      </div>
+      <div className="elements">
+        <div className="row">
+          <div className="col-12">
+            <p>
+              {" "}
+              <strong>Humidity: </strong>
+              {props.data.humidity}% <strong>Wind: </strong>
+              {""}
+              {Math.round(props.data.wind)} km/h{" "}
+            </p>
           </div>
         </div>
       </div>

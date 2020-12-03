@@ -11,5 +11,11 @@ h6 {
 }
 
 .InfoLocation h6 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.InfoLocation p {
+  color: thistle;
+  margin-top: 15px;
+  font-size: 13px;
 }
