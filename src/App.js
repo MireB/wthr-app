@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="row">
-          <div className="firstcity col-6">
+          <div className="col-6">
             <WeatherApp city="Barcelona" />
           </div>
-          <div className="secondcity col-6">
+          <div className="col-6">
             <WeatherApp city="Stockholm" />
           </div>
         </div>
