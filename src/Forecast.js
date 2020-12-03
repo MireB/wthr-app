@@ -10,9 +10,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import "./Forecast.css";
-
 import ForecastPreview from "./ForecastPreview";
+
+import "./Forecast.css";
 
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
