@@ -33,7 +33,7 @@ export default function MainIcon(props) {
       <ReactAnimatedWeather
         icon={Mapping[props.code]}
         color="white"
-        size={80}
+        size={66}
         animate={true}
       />
     </div>

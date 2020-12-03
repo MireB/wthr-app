@@ -13,7 +13,15 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <WeatherApp city="Stockholm" />
+        <div className="row">
+          <div className="firstcity col-6">
+            <WeatherApp city="Barcelona" />
+          </div>
+          <div className="firstcity col-6">
+            <WeatherApp city="Stockholm" />
+          </div>
+        </div>
+
         <footer>
           {" "}
           This project was coded by {""}

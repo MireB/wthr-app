@@ -4,6 +4,8 @@
 // 32) Create an State + const ->load the API call
 // 33) Conditional rendering.
 // 34) Create const for forecast
+// 37) Duplicate the component. (I had to create col because they were disposed in block and the css wasn't work)
+// 38) Change the conditional rendereing to have the forecast if the city is different.
 
 import React, { useState } from "react";
 import axios from "axios";
@@ -21,15 +23,22 @@ export default function Forecast(props) {
     setLoaded(true);
   }
 
-  if (loaded) {
+  if (loaded && props.city === forecast.city.name) {
     return (
-      <div className="Forecast row">
-        <div className="col-12">
-          <ForecastPreview data={forecast.list[0]} />
-          <ForecastPreview data={forecast.list[1]} />
-          <ForecastPreview data={forecast.list[2]} />
-          <ForecastPreview data={forecast.list[3]} />
-          <ForecastPreview data={forecast.list[4]} />
+      <div className="Forecast">
+        <div className="row">
+          <div className="col-3">
+            <ForecastPreview data={forecast.list[0]} />
+          </div>
+          <div className="col-3">
+            <ForecastPreview data={forecast.list[1]} />
+          </div>
+          <div className="col-3">
+            <ForecastPreview data={forecast.list[2]} />
+          </div>
+          <div className="col-3">
+            <ForecastPreview data={forecast.list[3]} />
+          </div>
         </div>
       </div>
     );
