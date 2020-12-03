@@ -16,13 +16,21 @@ function App() {
         <WeatherApp city="Stockholm" />
         <footer>
           {" "}
-          Open source code by{" "}
+          This project was coded by {""}
+          <a
+            href="https://www.linkedin.com/in/mireiabosch"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Mire Bosch {""}
+          </a>
+          and is open-sourced on{" "}
           <a
             href="https://github.com/MireB/wthr-app"
             target="_blank"
             rel="noreferrer"
           >
-            Mire Bosch.
+            GitHub.
           </a>
         </footer>
       </div>
