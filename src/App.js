@@ -17,7 +17,7 @@ function App() {
           <div className="firstcity col-6">
             <WeatherApp city="Barcelona" />
           </div>
-          <div className="firstcity col-6">
+          <div className="secondcity col-6">
             <WeatherApp city="Stockholm" />
           </div>
         </div>
