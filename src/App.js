@@ -13,14 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="row">
-          <div className="col-6">
-            <WeatherApp city="Barcelona" />
-          </div>
-          <div className="col-6">
-            <WeatherApp city="Stockholm" />
-          </div>
-        </div>
+        <WeatherApp city="Barcelona" />
 
         <footer>
           {" "}
